@@ -1,6 +1,6 @@
-var viewer = new Cesium.Viewer("cesiumContainer", {
-    terrainProvider: Cesium.creatWorldterrain()
-});
+import * as Cesium from 'cesium';
+
+var viewer = new Cesium.Viewer("cesiumContainer");
 var geeMetadata = new GoogleEarthEnterpriseMetadata('http://www.earthenterprise.org/3d');
 var gee = new Cesium.GoogleEarthEnterpriseImageryProvider({
     metadata: geeMetadata

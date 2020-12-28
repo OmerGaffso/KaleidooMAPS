@@ -1,0 +1,25 @@
+{
+  "name": "maps",
+  "version": "1.0.0",
+  "description": "Maps project for Kaleidoo",
+  "main": "maps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmerGaffso/KaleidooMAPS.git"
+  },
+  "author": "Omer Gaffso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmerGaffso/KaleidooMAPS/issues"
+  },
+  "homepage": "https://github.com/OmerGaffso/KaleidooMAPS#readme",
+  "devDependencies": {
+    "cesium": "^1.76.0"
+  },
+  "dependencies": {
+    "server.js": "^1.0.0"
+  }
+}
