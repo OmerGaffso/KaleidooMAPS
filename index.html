@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Use correct character set. -->
-        <meta charset="utf-8">
-        <!-- Tell IE to use the latest, best version. -->
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <!-- Make the app on mobile take up the full browser screen and disable user scaling. -->
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-        <title>ISRAEL MAP</title>
-        <!-- The Cesium library. -->    
-        <script src="/Build/Cesium/Cesium.js"></script>
-        <!-- <script src="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Cesium.js"></script> -->
-        <!-- <link href="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Widgets/widgets.css" rel="stylesheet"> -->
-        <!-- <script src="ThirdParty/Cesium/Cesium.js"></script> -->
-        <style>
-            @import url(/Build/Cesium/Widgets/widgets.css);
-            html,
-            body,
-            #cesiumContainer {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- A container for the Cesium Viewer to live in. -->
-        <div id="cesiumContainer"></div>
+  <head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8" />
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- Make the app on mobile take up the full browser screen and disable user scaling. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
 
-        <!-- Our app code. -->
-        <script src="maps.js"></script>
-    </body>
+    <title>MAP</title>
+
+    <script src="/Build/Cesium/Cesium.js"></script>
+
+    <style>
+      @import url(/Build/Cesium/Widgets/widgets.css);
+      html,
+      body,
+      #cesiumContainer {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .cesium-viewer-bottom {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- A container for the Cesium Viewer to live in. -->
+    <div id="cesiumContainer"></div>
+    <script src="maps.js"></script>
+  </body>
 </html>
