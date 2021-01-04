@@ -37,9 +37,9 @@
   // Create an initial camera view
   // set default view to Israel
   var initialPosition = new Cesium.Cartesian3.fromDegrees(
-    35.28472,
-    32.418775,
-    75000.0
+    35.301821,
+    32.150184,
+    150000.0
   );
   var homeCameraView = {
     destination: initialPosition,
@@ -55,3 +55,4 @@
     viewer.scene.camera.flyTo(homeCameraView);
   });
 })();
+30;
