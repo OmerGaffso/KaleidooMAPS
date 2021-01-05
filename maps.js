@@ -17,6 +17,34 @@
   });
 
   //////////////////////////////////////////////////////////////////////////
+  // Working Static PinBuilder And Points. Need To Add Dynamic Func.
+  //////////////////////////////////////////////////////////////////////////
+
+  //   var pinBuilder = new Cesium.PinBuilder();
+
+  //   var Jerusalem = viewer.entities.add({
+  //     name : 'Jerusalem',
+  //     position : Cesium.Cartesian3.fromDegrees(35.214148, 31.772692),
+  //     point : {
+  //         pixelSize : 5,
+  //         color : Cesium.Color.RED,
+  //         outlineColor : Cesium.Color.WHITE,
+  //         outlineWidth : 2
+  //     }
+  //   });
+
+  //   var Jerusalem2 = viewer.entities.add({
+  //     name: "SOME BULLSHIT LIBRARY",
+  //     position: Cesium.Cartesian3.fromDegrees(35.214200, 31.772692),
+  //     billboard: {
+  //       image: pinBuilder.fromColor(Cesium.Color.ROYALBLUE, 48).toDataURL(),
+  //       verticalOrigin: Cesium.VerticalOrigin.BOTOM ,
+  //     }
+  //   })
+
+  // viewer.entities;
+
+  //////////////////////////////////////////////////////////////////////////
   // Loading Imagery
   //////////////////////////////////////////////////////////////////////////
 
@@ -26,7 +54,8 @@
   // Add Sentinel-2 imagery
   viewer.imageryLayers.addImageryProvider(
     new Cesium.OpenStreetMapImageryProvider({
-      url: "https://a.tile.openstreetmap.org/",
+      url: "http://www.OmerMaps.com",
+      // url: "https://a.tile.openstreetmap.org/", // The Working Tile Provider For Open Street Maps Map.
     })
   );
 
@@ -35,7 +64,7 @@
   //////////////////////////////////////////////////////////////////////////
 
   // Create an initial camera view
-  // set default view to Israel
+  // set default view to Shomron, Israel
   var initialPosition = new Cesium.Cartesian3.fromDegrees(
     35.301821,
     32.150184,
