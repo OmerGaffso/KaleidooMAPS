@@ -394,7 +394,7 @@ gulp.task(
         "Source/**",
         "Specs/**",
         "ThirdParty/**",
-        "favicon.ico",
+
         "gulpfile.cjs",
         "server.cjs",
         "package.json",
@@ -529,7 +529,7 @@ function deployCesium(bucketName, uploadDirectory, cacheControl, done) {
           "Specs/**",
           "ThirdParty/**",
           "*.md",
-          "favicon.ico",
+
           "gulpfile.cjs",
           "index.html",
           "package.json",
