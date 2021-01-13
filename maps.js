@@ -9,11 +9,19 @@
   //////////////////////////////////////////////////////////////////////////
 
   var viewer = new Cesium.Viewer("cesiumContainer", {
+    // imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+    //   url: "http://10.240.19.60:8080/"
+    // }),
     scene3DOnly: true,
     selectionIndicator: false,
     baseLayerPicker: false,
     timeline: false,
     animation: false,
+    geocoder: false,
+  });
+
+  var osm = new Cesium.OpenStreetMapImageryProvider({
+    url: "http://10.240.19.60:8080/",
   });
 
   //////////////////////////////////////////////////////////////////////////
@@ -53,10 +61,8 @@
 
   // Add Sentinel-2 imagery
   viewer.imageryLayers.addImageryProvider(
-    new Cesium.OpenStreetMapImageryProvider({
-      url: "http://www.OmerMaps.com",
-      // url: "https://a.tile.openstreetmap.org/", // The Working Tile Provider For Open Street Maps Map.
-    })
+    osm
+    // url: "https://a.tile.openstreetmap.org/", // The Working Tile Provider For Open Street Maps Map.
   );
 
   //////////////////////////////////////////////////////////////////////////
