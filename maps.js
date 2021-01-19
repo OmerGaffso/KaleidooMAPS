@@ -9,9 +9,6 @@
   //////////////////////////////////////////////////////////////////////////
 
   var viewer = new Cesium.Viewer("cesiumContainer", {
-    // imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-    //   url: "http://10.240.19.60:8080/"
-    // }),
     scene3DOnly: true,
     selectionIndicator: false,
     baseLayerPicker: false,
@@ -21,36 +18,45 @@
   });
 
   var osm = new Cesium.OpenStreetMapImageryProvider({
-    url: "http://10.240.19.60:8080/",
+    url: "http://10.240.19.60:8080/tile/",
   });
 
   //////////////////////////////////////////////////////////////////////////
   // Working Static PinBuilder And Points. Need To Add Dynamic Func.
   //////////////////////////////////////////////////////////////////////////
 
-  //   var pinBuilder = new Cesium.PinBuilder();
+  var pinBuilder = new Cesium.PinBuilder();
 
-  //   var Jerusalem = viewer.entities.add({
-  //     name : 'Jerusalem',
-  //     position : Cesium.Cartesian3.fromDegrees(35.214148, 31.772692),
-  //     point : {
-  //         pixelSize : 5,
-  //         color : Cesium.Color.RED,
-  //         outlineColor : Cesium.Color.WHITE,
-  //         outlineWidth : 2
-  //     }
-  //   });
+  var Jerusalem = viewer.entities.add({
+    name: "Jerusalem",
+    position: Cesium.Cartesian3.fromDegrees(35.214148, 31.772692),
+    point: {
+      pixelSize: 5,
+      color: Cesium.Color.RED,
+      outlineColor: Cesium.Color.WHITE,
+      outlineWidth: 2,
+    },
+  });
 
-  //   var Jerusalem2 = viewer.entities.add({
-  //     name: "SOME BULLSHIT LIBRARY",
-  //     position: Cesium.Cartesian3.fromDegrees(35.214200, 31.772692),
-  //     billboard: {
-  //       image: pinBuilder.fromColor(Cesium.Color.ROYALBLUE, 48).toDataURL(),
-  //       verticalOrigin: Cesium.VerticalOrigin.BOTOM ,
-  //     }
-  //   })
+  var Jerusalem2 = viewer.entities.add({
+    name: "Jerusalem2",
+    position: Cesium.Cartesian3.fromDegrees(35.2142, 31.772692),
+    billboard: {
+      image: pinBuilder.fromColor(Cesium.Color.ROYALBLUE, 48).toDataURL(),
+      verticalOrigin: Cesium.VerticalOrigin.BOTOM,
+    },
+  });
 
-  // viewer.entities;
+  var shomron = viewer.entities.add({
+    name: "Shomron",
+    position: Cesium.Cartesian3.fromDegrees(35.301821, 32.150184),
+    billboard: {
+      image: pinBuilder.fromColor(Cesium.Color.BLUEVIOLET, 48).toDataURL(),
+      verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+    },
+  });
+
+  viewer.entities;
 
   //////////////////////////////////////////////////////////////////////////
   // Loading Imagery
