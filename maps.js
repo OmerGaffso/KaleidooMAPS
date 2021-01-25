@@ -56,6 +56,50 @@
     },
   });
 
+  var polyExample = viewer.entities.add({
+    name: "Ariel",
+    polygon: {
+      hierarchy: {
+        positions: Cesium.Cartesian3.fromDegreesArray([
+          35.16533553756058,
+          32.11008006670297,
+          35.21553160176735,
+          32.109345293288484,
+          35.21553160176735,
+          32.099930090561685,
+          35.16533553756058,
+          32.10024808833227,
+        ]),
+      },
+      material: Cesium.Color.BLUE.withAlpha(0.5),
+      height: 0,
+      outline: true,
+      outlineColor: Cesium.Color.BLACK,
+    },
+  });
+
+  var polyExample2 = viewer.entities.add({
+    name: "Afula",
+    polygon: {
+      hierarchy: {
+        positions: Cesium.Cartesian3.fromDegreesArray([
+          35.243007121359426,
+          32.64292704609912,
+          35.34176479164436,
+          32.633372125893786,
+          35.34176479164436,
+          32.57867712829367,
+          35.243007121359426,
+          32.58735267318366,
+        ]),
+      },
+      material: Cesium.Color.LIGHTSTEELBLUE.withAlpha(0.5),
+      height: 0,
+      outline: true,
+      outlineColor: Cesium.Color.BLACK,
+    },
+  });
+
   viewer.entities;
 
   //////////////////////////////////////////////////////////////////////////
